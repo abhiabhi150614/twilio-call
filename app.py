@@ -11,7 +11,7 @@ app = Flask(__name__)
 genai.configure(api_key=os.environ["GEMINI_API_KEY"])
 
 def ask_gemini(prompt):
-    model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("gemini-2.5-flash")
     response = model.generate_content(prompt)
     return response.text.strip()
 
